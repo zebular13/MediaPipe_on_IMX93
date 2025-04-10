@@ -4,7 +4,7 @@ Running the MediaPipe Models on MaaXBoard OSM93.
 
 ## Getting started
 
-clone the blaze_app_python repository here: 
+clone the [blaze_app_python](https://github.com/zebular13/blaze_app_python/tree/imx) repository here: 
 ```
 git clone https://github.com/zebular13/blaze_app_python/tree/imx 
 ```
@@ -19,16 +19,16 @@ cd models
 ./get_tflite_models.sh
 ```
 
-This includes the float32 pose, hand and face models (check the script for details) as well as the quantized pose and face models. 
+This includes the float32 pose, hand and face models (check the script for details) as well as the quantized pose, hand and face models. 
 
-To convert the quantized models to vela, run:
+To convert the quantized models to [vela](https://github.com/nxp-imx/ethos-u-vela), run:
 ```
 vela [modelname.tflite]
 ```
 
-Note that only quantized models can be converted to vela. 
+**Note:** only INT8 or UINT8 quantized models can be converted to vela.  
 
-Once the models have been downloaded, you can run the script in the ```blaze_tflite_imx``` folder:
+Once the models have been downloaded, you can run inference using the script in the ```blaze_tflite_imx``` folder:
 ```
 python3 blaze_detect_live_gstreamer.py -b face -q
 ```
