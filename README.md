@@ -6,14 +6,15 @@ Running the MediaPipe Models on MaaXBoard OSM93.
 
 clone the [blaze_app_python](https://github.com/zebular13/blaze_app_python/tree/imx) repository here: 
 ```
-git clone https://github.com/zebular13/blaze_app_python/tree/imx 
+git clone https://github.com/zebular13/blaze_app_python/tree
+cd blaze_app_python
+git checkout imx
 ```
 This is a python implementation of the MediaPipe framework.
 
 Download the models: 
 
 ```
-cd blaze_app_python
 cd blaze_tflite_imx
 cd models
 ./get_tflite_models.sh
